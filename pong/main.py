@@ -30,6 +30,9 @@ def main():
         # On met à jour l'affichage de l'écran pour afficher les modifs
         display.update()
 
+        if game.end_game() :
+            game.should_run = False
+
         # On récupère tous les évènement de pygame
         for event in pygame.event.get():
             # On s'occupe uniquement de l'évènement QUIT (croix, alt+f4)

@@ -43,4 +43,8 @@ class Game(GameObject):
         if self.ball.pos[0] == 800 and not self.enemy_paddle.as_rect().colliderect(self.ball.as_rect()):
             self.score_player += 1
 
+    def end_game(self):
+        if self.score_ia == 5 or self.score_player == 5 :
+            return True
+
         
